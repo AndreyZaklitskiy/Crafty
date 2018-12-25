@@ -1,4 +1,7 @@
 // modules & sections
+@import "../../node_modules/bootstrap/scss/bootstrap-grid";
+
+//@import "../../node_modules/font-awesome/scss/font-awesome";
 
 @import "modules/sprite";
 @import "functions";
@@ -51,3 +54,72 @@ h4, .h4 {
   font-family: $bold;
 }
 
+header{
+  .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 80px;
+    .logo {
+      margin-right: 40px;
+      width: 110px;
+      height: 40px;
+      border-right: 1px solid #404040;
+    }
+  }
+  &:before {
+    position: absolute;
+    content: '';
+    background-color: $dark;
+    width: 100vw;
+    height: 80px;
+    display: block;
+    left: 50%;
+    top: 0;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+
+  }
+}
+
+.header-menu {
+  ul>li {
+    display: inline-block;
+    margin-right: 35px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+.header-item {
+  a {
+    color: $white;
+    font-family: $regular;
+    font-size: 16px;
+  }
+}
+.header-networks {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+.network-box a {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid $white;
+  width: 31px;
+  height: 31px;
+  margin-left: 10px;
+  i {
+    //color: #fff;
+    font-size: 10px;
+  }
+  &:hover {
+    border-right-color: $white, darken(20%);
+  }
+}
